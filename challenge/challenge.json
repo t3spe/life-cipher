@@ -1,0 +1,66 @@
+{
+  "description": "The Life Cipher reduced-round challenge: recover the key of any tier",
+  "spec": "SPEC.md draft 0.4, algorithm version 1",
+  "parameters": {
+    "T": 6000,
+    "S": 16,
+    "k": 30,
+    "version": 1,
+    "note": "R below 16 is allowed only for this challenge (SPEC.md \u00a73.2 asks for R >= 16)"
+  },
+  "data": {
+    "messages": 1024,
+    "blocks_per_message": 1024,
+    "plaintext": "all zero bytes",
+    "ad": "empty",
+    "layout": "per message: IV (128 bytes), ciphertext (131,072 bytes), tag (16 bytes)"
+  },
+  "commitment": "SHA-256(salt || key), with the key as its 128 bytes (SPEC.md \u00a72.2) and a 32-byte salt revealed with the key",
+  "tiers": [
+    {
+      "R": 4,
+      "R_init": 8,
+      "R_final": 8,
+      "file": "life-challenge-R4.bin",
+      "bytes": 134365184,
+      "sha256": "6ecda788bd5ee1a2f71cdbcdfa0dfe2d2abcf1a8ffd8a42536536bd2f211dabd",
+      "key_commitment": "c95f1233c5ac01b2f9b7a5b5efeb1d3fe6519f75a7edf3ea764d5523258a84ef"
+    },
+    {
+      "R": 8,
+      "R_init": 16,
+      "R_final": 16,
+      "file": "life-challenge-R8.bin",
+      "bytes": 134365184,
+      "sha256": "2458c957b64b216f6527e3f4619ee711882becd8cc93e59a74dfe5a1279e9610",
+      "key_commitment": "216c8abd0be360cc1b6cecef6de2d4343c5d3b3752108bb0b673e20946cb4f35"
+    },
+    {
+      "R": 12,
+      "R_init": 24,
+      "R_final": 24,
+      "file": "life-challenge-R12.bin",
+      "bytes": 134365184,
+      "sha256": "5efa8c0786f9f22c7600764e5f28a1ea54485f36ae98ed0502887c9bb6eb8ea2",
+      "key_commitment": "5ec400d44518944e49192d25ee8b3d0430c62c6a012c160990fb1bf25dd1321a"
+    },
+    {
+      "R": 16,
+      "R_init": 32,
+      "R_final": 32,
+      "file": "life-challenge-R16.bin",
+      "bytes": 134365184,
+      "sha256": "d73729a878c7f3a3117f3bb9f5856b37bd3d8cd7e427db8e5c62a353f9f375e6",
+      "key_commitment": "2d88d2407652ac800f4df60d0f2f9d9e0d9b7c52521274f0d0c9ae51595ba238"
+    },
+    {
+      "R": 24,
+      "R_init": 48,
+      "R_final": 48,
+      "file": "life-challenge-R24.bin",
+      "bytes": 134365184,
+      "sha256": "f6fb4bd53d787e6e1d501def5db1ad77fd04fa562f2fac8297464014fc5157bc",
+      "key_commitment": "f588687c42bf6ca54e88770098bebf781c4b883145df1226f736501c8cbf2720"
+    }
+  ]
+}

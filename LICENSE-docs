@@ -1,0 +1,10 @@
+Copyright (c) 2026 T3ss
+
+The specification (SPEC.md), the description of the tests (HARNESS.md), the other Markdown documents in this
+repository, the test vectors (vectors/) and challenge/challenge.json are licensed under the Creative Commons
+Attribution 4.0 International license (CC BY 4.0).
+
+The license's full text: https://creativecommons.org/licenses/by/4.0/legalcode
+A summary: https://creativecommons.org/licenses/by/4.0/
+
+The code is under the MIT license (LICENSE).
